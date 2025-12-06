@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FP3級模擬試験・食品安全検定試験</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <div id="sidebar"></div>
+        <div class="container">
+            <h1 class="main-title">FP3級模擬試験・食品安全検定試験</h1>
+    
+            <div id="quiz-selection" class="screen active">
+                <h2>模擬試験を選択</h2>
+                <button class="select-quiz-btn" data-quiz="fp3_202505">FP3級 2025年5月</button>
+                <button class="select-quiz-btn" data-quiz="fp3_202405">FP3級 2024年5月</button>
+                <button class="select-quiz-btn" data-quiz="fp3_202309">FP3級 2023年9月</button>
+                <button class="select-quiz-btn" data-quiz="fp3_202305">FP3級 2023年5月</button>
+                <button class="select-quiz-btn" data-quiz="fp3_202401">FP3級 2024年1月</button>
+                <button class="select-quiz-btn" data-quiz="20250601">2025年6月1日 食品安全試験</button>
+                <button class="select-quiz-btn" data-quiz="20240521">2024年5月21日 食品安全試験</button>
+            </div>
+    
+            <div id="quiz-screen" class="screen">
+                <div id="feedback-message"></div>
+                <h2 id="quiz-title"></h2>
+                <div id="question-counter"></div>
+                <div id="question-container">
+                    <p id="question-text"></p>
+                    <img id="question-image" src="" alt="問題画像" style="display: none;">
+                    <div id="choices-container" class="choices"></div>
+                </div>
+                <div id="quiz-controls">
+                    <button id="answer-btn" class="btn">回答</button>
+                    <button id="next-btn" class="btn">次の問題</button>
+                    <button id="end-quiz-btn" class="btn">終わる</button>
+                </div>
+                <div id="explanation-container" class="explanation"></div>
+            </div>
+    
+            <div id="result-screen" class="screen">
+                <h2 id="result-title">結果</h2>
+                <p>正解数: <span id="correct-count"></span></p>
+                <p>不正解数: <span id="incorrect-count"></span></p>
+                <p>正答率: <span id="accuracy-rate"></span>%</p>
+                <button id="retry-btn" class="btn">もう一度</button>
+                <button id="retry-incorrect-btn" class="btn">不正解の問題を解き直す</button>
+                <button id="back-to-selection-btn" class="btn">試験選択に戻る</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="quiz_data_20250601.js"></script>
+    <script src="quiz_data_20240521.js"></script>
+    <script src="quiz_data_fp3_202401.js"></script>
+    <script src="quiz_data_fp3_202305.js"></script>
+    <script src="quiz_data_fp3_202309.js"></script>
+    <script src="quiz_data_fp3_202405.js"></script>
+    <script src="quiz_data_fp3_202505.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
