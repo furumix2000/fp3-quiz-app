@@ -277,16 +277,22 @@ h1, h2 {
         padding: 15px;
         height: auto;
         flex-grow: 1;
-        padding-top: 50px; /* Adjust as needed for hamburger button */
+        padding-top: 65px; /* Increased top padding to avoid overlap */
         position: relative;
     }
 
-    h1 {
-        font-size: 1.3rem;
-        /* margin-right: 40px; */ /* Removed as button is fixed positioned */
-        text-align: left; /* Adjust alignment to make space for hamburger */
+    h1, #quiz-screen h2 {
+        font-size: 1.2rem; /* Adjusted font size for consistency */
+        text-align: left;
         margin-top: 0;
         padding-left: 50px; /* Make space for hamburger */
+        margin-bottom: 15px;
+    }
+
+    /* Keep other h2s centered if they are not the quiz title */
+    #quiz-selection h2, #result-screen h2 {
+        text-align: center;
+        padding-left: 0; /* Reset padding */
     }
 
     h2 {
