@@ -33,6 +33,7 @@ body {
     height: 100vh;
     overflow-y: auto;
     border-right: 1px solid #dee2e6;
+    display: block; /* Ensure sidebar is visible on desktop */
 }
 
 #sidebar h3 {
@@ -265,21 +266,27 @@ h1, h2 {
         z-index: 1000;
         transition: left 0.3s ease-in-out;
         box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        display: none; /* Hide sidebar by default on mobile */
     }
-    
     #sidebar.visible {
         left: 0;
+        display: block; /* Show sidebar when visible class is added */
     }
 
     .container {
         padding: 15px;
         height: auto;
         flex-grow: 1;
+        padding-top: 50px; /* Adjust as needed for hamburger button */
+        position: relative;
     }
 
     h1 {
         font-size: 1.3rem;
-        margin-right: 40px; /* Space for hamburger */
+        /* margin-right: 40px; */ /* Removed as button is fixed positioned */
+        text-align: left; /* Adjust alignment to make space for hamburger */
+        margin-top: 0;
+        padding-left: 50px; /* Make space for hamburger */
     }
 
     h2 {
@@ -314,7 +321,7 @@ h1, h2 {
         position: fixed;
         top: 15px;
         left: 15px;
-        z-index: 1001;
+        z-index: 1002; /* Ensure it's on top of sidebar */
         background: none;
         border: none;
         cursor: pointer;
