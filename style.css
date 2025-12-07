@@ -131,6 +131,7 @@ h1, h2 {
     display: block;
     width: 80%;
     margin: 15px auto;
+    font-size: 18px; /* 14px + 3pt (約4px) */
 }
 
 #quiz-controls {
@@ -267,7 +268,6 @@ h1, h2 {
     .select-quiz-btn {
         width: 100%;
         padding: 15px;
-        font-size: 1.1em;
     }
 
     #quiz-controls {
