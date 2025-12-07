@@ -98,6 +98,10 @@ h1, h2 {
     text-align: center;
 }
 
+#quiz-title {
+    display: none; /* Hide quiz title globally */
+}
+
 .screen {
     display: none;
 }
@@ -273,11 +277,7 @@ h1, h2 {
         display: block; /* Show sidebar when visible class is added */
     }
 
-    #quiz-title {
-        display: none; /* Hide quiz title on mobile */
-    }
-
-    .container {
+        .container {
         padding: 15px;
         height: auto;
         flex-grow: 1;
