@@ -40,7 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let questionsAnswered = [];
     let incorrectQuestionIndexes = []; // 不正解だった問題のインデックスを保持
 
-    // --- Sidebar Functions ---
+
+
+
+
     const generateSidebar = (quizData) => {
         sidebar.innerHTML = '<h3>問題一覧</h3>';
         const ul = document.createElement('ul');
@@ -81,10 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
         screenToShow.classList.add('active');
         
         if (screenToShow === quizScreen) {
-            sidebar.style.display = 'block';
             mainTitle.classList.add('hidden');
         } else {
-            sidebar.style.display = 'none';
             mainTitle.classList.remove('hidden');
         }
     };
@@ -204,12 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const question = currentQuizData[currentQuestionIndex];
         const isCorrect = selectedChoice === question.answer;
         
-        // サイドバーの状態を更新
-        const link = sidebar.querySelector(`a[data-index='${currentQuestionIndex}']`);
-        if(link) {
-            link.classList.remove('answered-correct', 'answered-incorrect');
-            link.classList.add(isCorrect ? 'answered-correct' : 'answered-incorrect');
-        }
+
 
         if (questionsAnswered[currentQuestionIndex] === null) {
             questionsAnswered[currentQuestionIndex] = isCorrect;
