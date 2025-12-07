@@ -273,16 +273,20 @@ h1, h2 {
         display: block; /* Show sidebar when visible class is added */
     }
 
+    #quiz-title {
+        display: none; /* Hide quiz title on mobile */
+    }
+
     .container {
         padding: 15px;
         height: auto;
         flex-grow: 1;
-        padding-top: 65px; /* Increased top padding to avoid overlap */
+        padding-top: 50px; /* Adjusted top padding after hiding quiz title */
         position: relative;
     }
 
-    h1, #quiz-screen h2 {
-        font-size: 1.2rem; /* Adjusted font size for consistency */
+    h1 { /* This rule now only applies to h1 on mobile */
+        font-size: 1.2rem;
         text-align: left;
         margin-top: 0;
         padding-left: 50px; /* Make space for hamburger */
@@ -295,7 +299,7 @@ h1, h2 {
         padding-left: 0; /* Reset padding */
     }
 
-    h2 {
+    h2 { /* General h2 rule */
         font-size: 1.2rem;
     }
 
